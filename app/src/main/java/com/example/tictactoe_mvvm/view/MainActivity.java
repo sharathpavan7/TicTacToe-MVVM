@@ -1,8 +1,10 @@
-package com.example.tictactoe_mvvm;
+package com.example.tictactoe_mvvm.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.tictactoe_mvvm.R;
 
 public class MainActivity extends AppCompatActivity {
 

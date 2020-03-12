@@ -13,7 +13,7 @@ import com.example.tictactoe_mvvm.utils.StringUtils;
 
 public class GameViewmodel extends AndroidViewModel {
 
-    private ArrayMap<String, String> cells;
+    public ArrayMap<String, String> cells;
     private Game game;
 
     public GameViewmodel(Application application) {
