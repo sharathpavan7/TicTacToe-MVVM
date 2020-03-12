@@ -10,10 +10,10 @@ public class Game {
     private Player player1;
     private Player player2;
 
-    private Player currentPlayer = player1;
-    private Cell[][] cells;
+    public Player currentPlayer = player1;
+    public Cell[][] cells;
 
-    private MutableLiveData<Player> winner = new MutableLiveData<>();
+    public MutableLiveData<Player> winner = new MutableLiveData<>();
 
     public Game(String playerOne, String playerTwo) {
         cells = new Cell[BOARD_SIZE][BOARD_SIZE];
