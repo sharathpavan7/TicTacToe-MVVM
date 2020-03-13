@@ -27,11 +27,15 @@ public class Game {
     }
 
     public boolean hasGameEnded() {
-        if (hasThreeSameHorizontalCells() || hasThreeSameVerticalCells() || hasSameDiagonalCells())
+        if (hasThreeSameHorizontalCells() || hasThreeSameVerticalCells() || hasSameDiagonalCells()) {
+            winner.setValue(currentPlayer);
             return true;
+        }
 
-        if (isBoardFull())
+        if (isBoardFull()) {
+            winner.setValue(null);
             return true;
+        }
 
         return false;
     }
@@ -67,9 +71,9 @@ public class Game {
     private boolean isBoardFull() {
         for (Cell[] row : cells)
             for (Cell cell : row)
-                if (cell != null && !cell.isEmpty())
-                    return true;
-        return false;
+                if (cell == null || cell.isEmpty())
+                    return false;
+        return true;
     }
 
     private boolean areEqual(Cell ... cells) {
